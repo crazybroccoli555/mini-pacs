@@ -75,7 +75,7 @@ nav.scrolled .nav-links a { color: var(--navy); }
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url('img/michael-dolejs-FRdEUCB3DEU-unsplash.jpg') center center / cover no-repeat;
+  background: url('./img/michael-dolejs-FRdEUCB3DEU-unsplash.jpg') center center / cover no-repeat;
 }
 
 .hero::before {
