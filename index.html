@@ -4,119 +4,185 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mini-PACS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <nav id="mainNav">
-    <a href="#" class="logo"><img src="./img/Mini-PACS_Logo.jpg" alt="Mini-PACS Logo"></a>
-    <!-- <div class="nav-links">
-      <a href="#about">Über uns</a>
-      <a href="#download">Download</a>
-    </div> -->
-  </nav>
-
-  <!-- <header class="hero">
-    <div class="hero-content">
-      <h1>Mini-PACS</h1>
-      <p>Dein neues Lieblingssystem für medizinische Bildverwaltung</p>
-      <p class="byline">von Karina Patsaliuk, Matthias Krippner &amp; Thomas Bejze</p>
-      <a href="https://gitlab.oth-regensburg.de/IM/SWP_IM4/SWP_SoSe2026/team-1/-/archive/v1.0.0/team-1-v1.0.0.zip" class="btn-download" download>DOWNLOAD Source</a>
-    </div>
-  </header> -->
+  <!-- ================= HERO ================= -->
   <header class="hero">
-    <div class="hero-content">
-
-        <h1>Mini-PACS</h1>
-
-        <p class="hero-description">
-            Eine moderne Desktop-Anwendung zur Verwaltung medizinischer
-            Bilddaten und Patientendaten.
-        </p>
-
-        <div class="hero-tech">
-            <span>C++20</span>
-            <span>Qt</span>
-            <span>MySQL</span>
-        </div>
-
-        <div class="hero-buttons">
-            <a class="btn-download" href="#">
-                Projekt herunterladen
-            </a>
-
-            <a class="btn-secondary" href="#overview">
-                Mehr erfahren ↓
-            </a>
-        </div>
-
-        <p class="hero-authors">
-            Projekt von Karina Patsaliuk · Matthias Krippner · Thomas Bejze
-        </p>
-
-        <a class="scroll-indicator" href="#overview">
-            ↓
-        </a>
-
+    <div class="hero__text">
+      <h1 class="hero__title">Mini-PACS</h1>
+      <p class="hero__credits">Projekt von Karina Patsaliuk, Matthias Krippner &amp; Thomas Bejze</p>
+      <p class="hero__description">Eine moderne Desktop-Anwendung zur Verwaltung medizinischer Bilddaten und Patientendaten</p>
+      <div class="hero__buttons">
+        <a href="https://gitlab.oth-regensburg.de/IM/SWP_IM4/SWP_SoSe2026/team-1/-/archive/v1.0.0/team-1-v1.0.0.zip" class="btn btn-primary">DOWNLOAD</a>
+        <a href="#why-us" class="btn btn-secondary">Mehr erfahren</a>
+      </div>
     </div>
-</header>
 
-  <section id="about">
-    <h2 class="section-title">Was ist Mini-PACS?</h2>
-    <p class="section-subtitle">
-      Eine schlanke Desktop-Anwendung, die Ärzt:innen die strukturierte Speicherung,
-      Verwaltung und Anzeige von Medizinbildern ermöglicht - ohne den Preis und die
-      Komplexität großer PACS-Systeme
-    </p>
-    <div class="about-grid">
-      <div class="about-card">
-        <div class="icon">🔒</div>
-        <h3>Rollenbasierte Rechte</h3>
-        <p>Ärzt:innen sehen ausschließlich die Daten ihrer eigenen Patient:innen.</p>
-      </div>
-      <div class="about-card">
-        <div class="icon">🗂️</div>
-        <h3>Strukturierte Bilder</h3>
-        <p>Bilder werden Patientendaten zugeordnet, mit Metadaten versehen und zu Serien gruppiert.</p>
-      </div>
-      <div class="about-card">
-        <div class="icon">📋</div>
-        <h3>Audit Log</h3>
-        <p>Jede Useraktion wird mit Beschreibung und Zeitstempel nachvollziehbar protokolliert.</p>
+    <div class="hero__demo">
+      <video controls poster="./img/Hero.png">
+        <source src="./videos/Demo.mp4" type="video/mp4">
+        Ihr Browser unterstützt keine Videowiedergabe.
+      </video>
+    </div>
+  </header>
+
+  <div class="hero-spacer"></div>
+
+  <!-- ================= WHY US ================= -->
+  <section class="why-us" id="why-us">
+    <img class="why-us__image" src="./img/storyset/Doctor-pana-2.png" alt="Illustration eines Arztes / einer Ärztin am Rechner">
+
+    <div class="why-us__content">
+      <p class="eyebrow">Die einfache Lösung für die Verwaltung von Patientendaten und medizinischen Bildern in kleinen Praxen</p>
+      <h2 class="section-title">Warum Mini-PACS?</h2>
+
+      <div class="why-us__list">
+        <div class="why-us__row">
+          <img class="why-us__icon" src="./img/icons/group-2.png" alt="">
+          <div>
+            <h3>Rollenbasierte Zugriffsrechte</h3>
+            <p>Jede:r Arzt/Ärztin sieht nur die eigenen Patient:innen. Administratoren verwalten das gesamte System.</p>
+          </div>
+        </div>
+
+        <div class="why-us__row">
+          <img class="why-us__icon" src="./img/icons/photo-strip.png" alt="">
+          <div>
+            <h3>Strukturierte Bildverwaltung</h3>
+            <p>Bilder werden Patient:innen eindeutig zugeordnet, mit Metadaten versehen und übersichtlich in Serien organisiert.</p>
+          </div>
+        </div>
+
+        <div class="why-us__row">
+          <img class="why-us__icon" src="./img/icons/file.png" alt="">
+          <div>
+            <h3>Nachvollziehbarkeit durch Audit Log</h3>
+            <p>Alle relevanten Änderungen werden protokolliert und bleiben jederzeit nachvollziehbar.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <div class="tech-strip">
-    <h4>Gebaut mit</h4>
-    <div class="tech-tags">
-      <span>C++20</span>
-      <span>Qt</span>
-      <span>MySQL</span>
-      <span>CMake</span>
-      <span>Docker</span>
-      <span>GitLab CI/CD</span>
+  <!-- ================= TECHNOLOGIES ================= -->
+  <section class="tech">
+    <h3 class="tech__subtitle">Made with</h3>
+    <div class="tech__logos">
+      <span class="tech__logo">C++20</span>
+      <span class="tech__logo">Qt</span>
+      <span class="tech__logo">MySQL</span>
+      <span class="tech__logo">Docker</span>
+      <span class="tech__logo">CMake</span>
+      <span class="tech__logo">GitLab CI/CD</span>
     </div>
-  </div>
+  </section>
 
-  <footer>
-    <img src="./img/Mini-PACS_Logo.jpg" alt="Mini-PACS Logo" class="footer-logo">
-    <p>von Karina Patsaliuk, Matthias Krippner &amp; Thomas Bejze</p>
-    <p class="credit">
-      Photo by <a href="https://unsplash.com/@michaeldolejs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Michael Dolejš</a> on <a href="https://unsplash.com/photos/person-using-macbook-pro-on-white-table-FRdEUCB3DEU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-    </p>
+  <!-- ================= FEATURES ================= -->
+  <section class="features">
+    <div class="features__header">
+      <h2 class="features__title">Alles Wichtige auf einen Blick</h2>
+      <p class="features__subtitle">Die wichtigsten Funktionen im Überblick – intuitiv, übersichtlich und speziell für den Einsatz in kleinen Praxen entwickelt</p>
+    </div>
+
+    <div class="feature-grid">
+      <article class="feature-card">
+        <img src="./img/features/1.png" alt="Patientenverwaltung">
+        <div class="feature-card__body">
+          <h3>Patienten schnell anlegen und verwalten</h3>
+          <p>Erstellen Sie neue Patienten und bearbeiten Sie Stammdaten zentral an einem Ort</p>
+        </div>
+      </article>
+
+      <article class="feature-card">
+        <img src="./img/features/2.png" alt="Patientenübersicht">
+        <div class="feature-card__body">
+          <h3>Alle wichtigen Informationen auf einen Blick</h3>
+          <p>Patientendaten, Bilder und Bildserien sind übersichtlich in einer Ansicht zusammengefasst</p>
+        </div>
+      </article>
+
+      <article class="feature-card">
+        <img src="./img/features/3.png" alt="Metadaten bearbeiten">
+        <div class="feature-card__body">
+          <h3>Metadaten einfach bearbeiten</h3>
+          <p>Metadaten zu Bildern und Serien lassen sich direkt in der Anwendung anpassen und ergänzen.</p>
+        </div>
+      </article>
+
+      <article class="feature-card">
+        <img src="./img/features/4.png" alt="Bildserien verwalten">
+        <div class="feature-card__body">
+          <h3>Bildserien verwalten</h3>
+          <p>Gruppieren Sie Bilder in übersichtlichen Serien für eine strukturierte und effiziente Verwaltung</p>
+        </div>
+      </article>
+
+      <article class="feature-card">
+        <img src="./img/features/5.png" alt="Audit Log">
+        <div class="feature-card__body">
+          <h3>Änderungen jederzeit nachvollziehen</h3>
+          <p>Alle relevanten Benutzeraktionen werden automatisch mit Zeitstempel protokolliert</p>
+        </div>
+      </article>
+
+      <article class="feature-card">
+        <img src="./img/features/6.png" alt="Weitere Funktion">
+        <div class="feature-card__body">
+          <h3>Sicher und zuverlässig</h3>
+          <p>Ihre Daten bleiben lokal und sind jederzeit unter Ihrer Kontrolle</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= DOWNLOAD ================= -->
+  <section class="download" id="download">
+    <div class="download__card">
+      <div class="download__content">
+        <h2 class="download__title">Jetzt mit Mini-PACS starten</h2>
+
+        <ul class="download__list">
+          <li>Vollständiger Quellcode</li>
+          <li>Projektdokumentation</li>
+          <li>Präsentationsfolien</li>
+          <li>Installations- und Ausführungsskripte</li>
+        </ul>
+
+        <a href="https://gitlab.oth-regensburg.de/IM/SWP_IM4/SWP_SoSe2026/team-1/-/archive/v1.0.0/team-1-v1.0.0.zip" class="btn btn-primary">DOWNLOAD</a>
+      </div>
+
+      <img class="download__image" src="./img/storyset/Doctors-pana.png" alt="Illustration von Ärzt:innen">
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <img class="footer__logo" src="./img/logos/Logo image.png" alt="Mini-PACS Logo">
+        <p>Projekt von Karina Patsaliuk, Matthias Krippner &amp; Thomas Bejze</p>
+      </div>
+
+      <div class="footer__credits">
+        <h3>Credits</h3>
+        <ul>
+          <li>Uicons by <a href="https://www.flaticon.com/uicons" target="_blank" rel="noopener">Flaticon</a></li>
+          <li><a href="https://storyset.com/work" target="_blank" rel="noopener">Work illustrations by Storyset</a></li>
+          <li>Icons made by <a href="https://www.flaticon.com/authors/magnific" target="_blank" rel="noopener">Magnific</a> from <a href="https://www.flaticon.com/" target="_blank" rel="noopener">www.flaticon.com</a></li>
+          <li>Photo by <a href="https://unsplash.com/@niaid?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener">National Institute of Allergy and Infectious Diseases</a> on <a href="https://unsplash.com/photos/a-close-up-of-a-piece-of-food-on-a-table-OPBjE21jwLo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener">Unsplash</a></li>
+          <li>Photo by <a href="https://unsplash.com/@nci?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener">National Cancer Institute</a> on <a href="https://unsplash.com/photos/red-and-blue-ball-illustration-pX_cWEBhzZQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener">Unsplash</a></li>
+          <li>Photo by <a href="https://unsplash.com/@nci?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener">National Cancer Institute</a> on <a href="https://unsplash.com/photos/black-and-white-abstract-painting-59pGROkKJPE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener">Unsplash</a></li>
+          <li>Photo by <a href="https://unsplash.com/@nci?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener">National Cancer Institute</a> on <a href="https://unsplash.com/photos/pink-and-purple-floral-textile-4zA4w-dr5WM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener">Unsplash</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="footer__rights">© 2026 Mini-PACS. Alle Rechte vorbehalten.</p>
   </footer>
-
-  <script>
-    window.addEventListener('scroll', () => {
-      const nav = document.getElementById('mainNav');
-      if (window.scrollY > 60) {
-        nav.classList.add('scrolled');
-      } else {
-        nav.classList.remove('scrolled');
-      }
-    });
-  </script>
 
 </body>
 </html>

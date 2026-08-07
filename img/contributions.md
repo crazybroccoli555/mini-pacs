@@ -1,2 +1,0 @@
-Photo by <a href="https://unsplash.com/@michaeldolejs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Michael Dolejš</a> on <a href="https://unsplash.com/photos/person-using-macbook-pro-on-white-table-FRdEUCB3DEU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-      
