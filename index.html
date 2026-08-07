@@ -6,44 +6,48 @@
 <title>Mini-PACS</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- ================= HERO ================= -->
-  <header class="hero">
-    <div class="hero__text">
-      <h1 class="hero__title">Mini-PACS</h1>
-      <p class="hero__credits">Projekt von Karina Patsaliuk, Matthias Krippner &amp; Thomas Bejze</p>
-      <p class="hero__description">Eine moderne Desktop-Anwendung zur Verwaltung medizinischer Bilddaten und Patientendaten</p>
-      <div class="hero__buttons">
-        <a href="https://gitlab.oth-regensburg.de/IM/SWP_IM4/SWP_SoSe2026/team-1/-/archive/v1.0.0/team-1-v1.0.0.zip" class="btn btn-primary">DOWNLOAD</a>
-        <a href="#why-us" class="btn btn-secondary">Mehr erfahren</a>
+    <!-- ================= HERO ================= -->
+    <header class="hero">
+      <div class="hero__text">
+        <h1 class="hero__title">Mini-PACS</h1>
+        <div class="text_container">
+          <p class="hero__description">Eine moderne Desktop-Anwendung zur Verwaltung medizinischer Bilddaten und Patientendaten</p>
+          <p class="hero__credits">Projekt von Karina Patsaliuk, Matthias Krippner &amp; Thomas Bejze</p>
+        </div>
       </div>
-    </div>
+        <div class="hero__buttons">
+          <a href="https://gitlab.oth-regensburg.de/IM/SWP_IM4/SWP_SoSe2026/team-1/-/archive/v1.0.0/team-1-v1.0.0.zip" class="btn btn-primary">DOWNLOAD</a>
+          <a href="#why-us" class="btn btn-secondary">Mehr erfahren</a>
+        </div>
 
-    <div class="hero__demo">
-      <video controls poster="./img/Hero.png">
-        <source src="./videos/Demo.mp4" type="video/mp4">
-        Ihr Browser unterstützt keine Videowiedergabe.
-      </video>
-    </div>
-  </header>
+      <div class="hero__demo">
+          <video controls class="hero__demo_video">
+            <source src="./videos/Demo.mp4" type="video/mp4">
+            Ihr Browser unterstützt keine Videowiedergabe.
+          </video>
+      </div>
 
-  <div class="hero-spacer"></div>
+    </header>
+
+    <div class="hero-spacer"></div>
 
   <!-- ================= WHY US ================= -->
   <section class="why-us" id="why-us">
     <img class="why-us__image" src="./img/storyset/Doctor-pana-2.png" alt="Illustration eines Arztes / einer Ärztin am Rechner">
 
     <div class="why-us__content">
-      <p class="eyebrow">Die einfache Lösung für die Verwaltung von Patientendaten und medizinischen Bildern in kleinen Praxen</p>
-      <h2 class="section-title">Warum Mini-PACS?</h2>
-
+      <div class="why-us__header">
+        <h2 class="section-title">Warum Mini-PACS?</h2>
+        <p class="eyebrow">Die einfache Lösung für die Verwaltung von Patientendaten und medizinischen Bildern in kleinen Praxen</p>
+      </div>
       <div class="why-us__list">
         <div class="why-us__row">
           <img class="why-us__icon" src="./img/icons/group-2.png" alt="">
-          <div>
+          <div class="why-us__text">
             <h3>Rollenbasierte Zugriffsrechte</h3>
             <p>Jede:r Arzt/Ärztin sieht nur die eigenen Patient:innen. Administratoren verwalten das gesamte System.</p>
           </div>
@@ -51,7 +55,7 @@
 
         <div class="why-us__row">
           <img class="why-us__icon" src="./img/icons/photo-strip.png" alt="">
-          <div>
+          <div class="why-us__text">
             <h3>Strukturierte Bildverwaltung</h3>
             <p>Bilder werden Patient:innen eindeutig zugeordnet, mit Metadaten versehen und übersichtlich in Serien organisiert.</p>
           </div>
@@ -59,7 +63,7 @@
 
         <div class="why-us__row">
           <img class="why-us__icon" src="./img/icons/file.png" alt="">
-          <div>
+          <div class="why-us__text">
             <h3>Nachvollziehbarkeit durch Audit Log</h3>
             <p>Alle relevanten Änderungen werden protokolliert und bleiben jederzeit nachvollziehbar.</p>
           </div>
@@ -70,14 +74,14 @@
 
   <!-- ================= TECHNOLOGIES ================= -->
   <section class="tech">
-    <h3 class="tech__subtitle">Made with</h3>
+    <h3 class="tech__subtitle">Gebaut mit</h3>
     <div class="tech__logos">
       <span class="tech__logo">C++20</span>
-      <span class="tech__logo">Qt</span>
-      <span class="tech__logo">MySQL</span>
-      <span class="tech__logo">Docker</span>
-      <span class="tech__logo">CMake</span>
-      <span class="tech__logo">GitLab CI/CD</span>
+      <div class="tech__logo-container_1"><span class="tech__logo">Qt</span></div>
+      <div class="tech__logo-container_1"><span class="tech__logo">MySQL</span></div>
+      <div class="tech__logo-container_1"><span class="tech__logo">Docker</span></div>
+      <div class="tech__logo-container_2"><span class="tech__logo">CMake</span></div>
+      <div class="tech__logo-container_2"><span class="tech__logo">GitLab CI/CD</span></div>
     </div>
   </section>
 
@@ -89,53 +93,71 @@
     </div>
 
     <div class="feature-grid">
+    <div class="feature-row">
       <article class="feature-card">
         <img src="./img/features/1.png" alt="Patientenverwaltung">
         <div class="feature-card__body">
+          <div class="feature-card__text">
           <h3>Patienten schnell anlegen und verwalten</h3>
           <p>Erstellen Sie neue Patienten und bearbeiten Sie Stammdaten zentral an einem Ort</p>
         </div>
+      </div>
       </article>
 
       <article class="feature-card">
         <img src="./img/features/2.png" alt="Patientenübersicht">
         <div class="feature-card__body">
-          <h3>Alle wichtigen Informationen auf einen Blick</h3>
-          <p>Patientendaten, Bilder und Bildserien sind übersichtlich in einer Ansicht zusammengefasst</p>
+          <div class="feature-card__text">
+            <h3>Alle wichtigen Informationen auf einen Blick</h3>
+            <p>Patientendaten, Bilder und Bildserien sind übersichtlich in einer Ansicht zusammengefasst</p>
+          </div>
         </div>
       </article>
+    </div>
 
+    <div class="feature-row">
       <article class="feature-card">
         <img src="./img/features/3.png" alt="Metadaten bearbeiten">
         <div class="feature-card__body">
+          <div class="feature-card__text">
           <h3>Metadaten einfach bearbeiten</h3>
           <p>Metadaten zu Bildern und Serien lassen sich direkt in der Anwendung anpassen und ergänzen.</p>
         </div>
+      </div>
       </article>
 
       <article class="feature-card">
         <img src="./img/features/4.png" alt="Bildserien verwalten">
         <div class="feature-card__body">
+          <div class="feature-card__text">
           <h3>Bildserien verwalten</h3>
           <p>Gruppieren Sie Bilder in übersichtlichen Serien für eine strukturierte und effiziente Verwaltung</p>
         </div>
+      </div>
       </article>
+      </div>
 
+      <div class="feature-row">
       <article class="feature-card">
         <img src="./img/features/5.png" alt="Audit Log">
         <div class="feature-card__body">
-          <h3>Änderungen jederzeit nachvollziehen</h3>
-          <p>Alle relevanten Benutzeraktionen werden automatisch mit Zeitstempel protokolliert</p>
+          <div class="feature-card__text">
+            <h3>Änderungen jederzeit nachvollziehen</h3>
+            <p>Alle relevanten Benutzeraktionen werden automatisch mit Zeitstempel protokolliert</p>
+          </div>
         </div>
       </article>
 
       <article class="feature-card">
         <img src="./img/features/6.png" alt="Weitere Funktion">
         <div class="feature-card__body">
+          <div class="feature-card__text">
           <h3>Sicher und zuverlässig</h3>
           <p>Ihre Daten bleiben lokal und sind jederzeit unter Ihrer Kontrolle</p>
         </div>
+      </div>
       </article>
+      </div>
     </div>
   </section>
 
@@ -144,19 +166,33 @@
     <div class="download__card">
       <div class="download__content">
         <h2 class="download__title">Jetzt mit Mini-PACS starten</h2>
+        <div class="download__list">
+          <p class="download__includes">Enthalten:</p>
+          <div class="download__feature-wrapper">
+            <img class="download__icon" src="./img/icons/Checkmark.png" alt="">
+            <p>Vollständiger Quellcode</p>
+          </div>
+          <div class="download__feature-wrapper">
+            <img class="download__icon" src="./img/icons/Checkmark.png" alt="">
+            <p>Projektdokumentation</p>
+          </div>
+          <div class="download__feature-wrapper">
+            <img class="download__icon" src="./img/icons/Checkmark.png" alt="">
+            <p>Präsentationsfolien</p>
+          </div>
+          <div class="download__feature-wrapper">
+            <img class="download__icon" src="./img/icons/Checkmark.png" alt="">
+            <p>Installations- und Ausführungsskripte</p>
+          </div>
+        </div>
 
-        <ul class="download__list">
-          <li>Vollständiger Quellcode</li>
-          <li>Projektdokumentation</li>
-          <li>Präsentationsfolien</li>
-          <li>Installations- und Ausführungsskripte</li>
-        </ul>
-
-        <a href="https://gitlab.oth-regensburg.de/IM/SWP_IM4/SWP_SoSe2026/team-1/-/archive/v1.0.0/team-1-v1.0.0.zip" class="btn btn-primary">DOWNLOAD</a>
+        <a href="https://gitlab.oth-regensburg.de/IM/SWP_IM4/SWP_SoSe2026/team-1/-/archive/v1.0.0/team-1-v1.0.0.zip" class="btn btn-download">DOWNLOAD</a>
       </div>
 
+      <div class="download__image-container">
       <img class="download__image" src="./img/storyset/Doctors-pana.png" alt="Illustration von Ärzt:innen">
-    </div>
+      </div>
+  </div>
   </section>
 
   <!-- ================= FOOTER ================= -->

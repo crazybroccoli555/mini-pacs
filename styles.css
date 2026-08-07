@@ -50,28 +50,42 @@
   }
 
   .btn-primary {
-    background: var(--color-primary);
+    margin: 0;
+    padding: 12px 16px;
+    background: #002E6A;
     color: #FCFCFF;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26.1px;
   }
 
   .btn-secondary {
-    background: transparent;
-    color: #FFFFFF;
-    outline: 2px solid #FCFCFF;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 12px;
+    outline: 2px #FCFCFF solid;
     outline-offset: -2px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    display: flex;
   }
 
   /* ---------- Hero ---------- */
   .hero {
     position: relative;
-    padding: 79px 64px 64px;
-    background: linear-gradient(180deg, rgba(0, 8, 33, 0.55), rgba(0, 8, 33, 0.75)), url('./img/Hero.png') center / cover no-repeat;
-    color: #fff;
+    background: url('./img/Hero.png') lightgray 50% / cover no-repeat;
     display: flex;
+    height: 734px;
+    padding: 79px 64px 64px 64px;
     flex-direction: column;
     align-items: center;
-    text-align: center;
     gap: 52px;
+    align-self: stretch;
+    color: #fff;
+    text-align: center;
     overflow: hidden;
   }
 
@@ -79,38 +93,98 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 24px;
-    max-width: 760px;
+    justify-content: center;
+    gap: 48px;
+    align-self: stretch;
   }
 
   .hero__title {
-    margin: 0;
-    font-size: 64px;
-    font-weight: 700;
-    line-height: 1.1;
-  }
-
-  .hero__credits {
-    margin: 0;
-    font-size: 16px;
-    font-weight: 400;
-  }
-
-  .hero__description {
-    margin: 24px 0 0;
-    font-size: 25px;
-    font-weight: 500;
-    max-width: 630px;
-  }
-
-  .hero__buttons {
     display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
+    flex-direction: column;
+    justify-content: center;
+    width: 740px;
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%; /* 70.4px */
+    letter-spacing: -1.28px;
+  }
+
+  .text_container {
+    width: 630px;
+    height: 124px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
   }
 
-  .hero__demo {
+  .hero__description {
+    display: flex;
+    width: 630px;
+    height: 78px;
+    flex-direction: column;
+    justify-content: center;
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 145%; /* 36.25px */
+    letter-spacing: -0.125px;
+  }
+
+  .hero__credits {
+    /* width: 489px; */
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 145%; /* 23.2px */
+    letter-spacing: -0.08px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hero__buttons {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    align-items: flex-end;
+    align-content: flex-end;
+    margin: 0;
+  }
+
+.hero__demo {
+    /* position: absolute;
+    margin-top: -270px;
+    width: 863px;
+    height: 518px;
+    border-radius: 32px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0px 5px 19px rgba(0, 0, 0, 0.08), 0px 0px 4.4px rgba(0, 0, 0, 0.06);
+    left: calc((1280px - 863px) / 2);
+    top: 216px;
+    z-index: 10; */
+width: 863px;
+height: 518px;
+position: absolute;
+left: 208px;
+top: 475px;
+border-radius: 32px;
+border: 0 solid #FFF;
+box-shadow: 0 0 4.4px 0 rgba(0, 0, 0, 0.06), 0 5px 19px 0 rgba(0, 0, 0, 0.08);
+  }
+
+  /* .hero__demo {
     position: relative;
     margin-top: -270px;
     width: 100%;
@@ -118,16 +192,28 @@
     border-radius: 32px;
     overflow: hidden;
     box-shadow: 0 5px 19px rgba(0, 0, 0, 0.15), 0 0 4px rgba(0, 0, 0, 0.1);
-  }
+  } */
 
-  .hero__demo video {
+.hero__demo_video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero__demo video {
     width: 100%;
     display: block;
   }
 
   /* spacer so the following section clears the floating demo video */
   .hero-spacer {
-    height: 220px;
+    width: 1280px;
+    height: 335px;
+    padding-top: 48px;
+    padding-bottom: 74px;
+    position: absolute;
+    top: 734px;
+    left: 0px;
     background: var(--color-bg);
   }
 
