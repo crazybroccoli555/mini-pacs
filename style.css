@@ -404,6 +404,7 @@ a { color: inherit; }
     font-size: 20px;
     font-weight: 500;
     color: rgba(2, 32, 71, 0.7);
+    line-height: 155%;
   }
 
 .feature-grid {
