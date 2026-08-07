@@ -468,6 +468,9 @@ a { color: inherit; }
   font-size: 17px;
   font-weight: 500;
   color: rgba(2, 32, 71, 0.7);
+  font-style: normal;
+  line-height: 140%; /* 23.8px */
+  letter-spacing: -0.085px;
 }
 
 /* ---------- Download ---------- */
